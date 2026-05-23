@@ -55,14 +55,14 @@ dnf install -y restic sshfs fuse
 
 ---
 
-## 🔐 SSH Authentication Setup
+## 🔐 SSH Key Strategy
 
-This project uses **SSH key-based authentication** for automation.
+This project uses ED25519 SSH keys for secure and efficient authentication.
 
-### Generate SSH key:
+Keys are generated per-server to isolate access:
 
 ```bash
-ssh-keygen -t rsa -b 4096
+ssh-keygen -t ed25519 -f ~/.ssh/server1
 ```
 
 ### Copy key to source server:
