@@ -73,6 +73,15 @@ ssh-copy-id root@192.168.1.1
 
 After this setup, no password is required for SSH access.
 
+Note:
+For simplicity, examples in this project use the root user.
+In production environments, it is strongly recommended to use a dedicated non-root backup user with restricted SSH and filesystem permissions following the principle of least privilege.
+
+Example production configuration:
+
+```bash
+ssh-copy-id backup@192.168.1.1
+```
 ---
 
 ## ⚙️ Configuration
